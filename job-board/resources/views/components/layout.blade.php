@@ -10,8 +10,7 @@
 </head>
 
 <body>
-    <div class="text-4xl">This should be a big text!</div>
-    <div>Comparison.</div>
+    {{$slot}}
 </body>
 
 </html>
