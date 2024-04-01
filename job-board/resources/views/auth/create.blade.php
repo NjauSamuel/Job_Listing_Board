@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="text-indigo-600 hover:underline">
-                    <a href="">Forget Password?</a>
+                    <a href="">Forgot Password?</a>
                 </div>
 
             </div>
