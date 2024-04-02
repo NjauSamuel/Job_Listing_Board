@@ -20,7 +20,7 @@ class JobApplicationController extends Controller
         $this->authorize('apply', $job);
         $job->jobApplications()->create([
             'user_id' => $request->user()->id,
-            ...$request->validate(['expected_salay' => 'required|min:1|max:1000000'])
+            ...$request->validate(['expected_salary' => 'required|min:1|max:1000000'])
         ]);
 
         return redirect()->route('jobs.show', $job)
