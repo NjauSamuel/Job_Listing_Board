@@ -28,10 +28,30 @@
 
                 </div>
 
-                <div>Right</div>
+                <div>
+                    <form action="{{route('my-job-applications.destroy', $application)}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+
+                        <x-button>Cancel</x-button>
+                    
+                    </form>
+                </div>
             </div>
         </x-job-card>
 
     @empty
+
+        <div class="rounded-md border border-dashed border-slate-300 py-8">
+            <div class="text-center font-medium">
+                No job applications yet. 
+            </div>
+
+            <div class="text-center text-indigo-900">
+                Go find some jobs <a class="hover:underline" href="{{route('jobs.index')}}">here</a>!
+            </div>
+
+        </div>
+
     @endforelse
 </x-layout>
