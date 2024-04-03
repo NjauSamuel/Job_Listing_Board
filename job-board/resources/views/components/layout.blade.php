@@ -18,7 +18,9 @@
         <ul class="flex space-x-3">
             @auth
                 <li>
-                    {{auth()->user()->name ?? 'Anonymous'}}
+                    <a href="{{route('my-job-applications.index')}}">
+                        {{auth()->user()->name ?? 'Anonymous'}}: Applications
+                    </a>
                 </li>
                 <li>
                     <p>|</p>
