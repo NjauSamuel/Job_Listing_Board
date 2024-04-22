@@ -8,6 +8,12 @@ use App\Http\Controllers\MyJobApplicationController;
 use App\Http\Controllers\EmployerController;
 use App\Http\Controllers\MyJobController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PdfController;
+
+// routes/web.php
+Route::get('/jobs/report', [PdfController::class, 'generateJobsReport'])->name('jobs.report');
+
+
 
 /*
 |--------------------------------------------------------------------------
