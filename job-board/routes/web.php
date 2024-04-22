@@ -3,6 +3,7 @@
 use App\Http\Controllers\JobApplicationController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SignUpController;
 use App\Http\Controllers\MyJobApplicationController;
 use App\Http\Controllers\EmployerController;
 use App\Http\Controllers\MyJobController;
@@ -29,6 +30,9 @@ Route::resource("jobs", JobController::class)
 Route::get('login', fn() => to_route('auth.create'))->name('login');
 
 Route::resource('auth', AuthController::class)
+    ->only(['create', 'store']);
+
+Route::resource('signup', SignUpController::class)
     ->only(['create', 'store']);
 
 Route::delete('logout', fn() => to_route('auth.destroy'))->name('logout');

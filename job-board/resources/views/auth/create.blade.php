@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="text-indigo-600 hover:underline">
-                    <a href="">Forgot Password?</a>
+                    <a href="{{route('signup.create')}}">Sign-Up?</a>
                 </div>
 
             </div>
