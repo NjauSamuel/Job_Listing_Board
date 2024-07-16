@@ -5,18 +5,21 @@
             {!!nl2br(e($job->description))!!}
         </p>
 
-        @can('apply', $job)
-            <x-link-button :href="route('job.application.create', $job)">
-                Apply
-            </x-link-button>
-
+        @if(auth()->check())
+            @can('apply', $job)
+                <x-link-button :href="route('job.application.create', $job)">
+                     Apply
+                </x-link-button>
             @else
-
+                <div class="text-center text-sm font-medium text-slate-500">
+                    You already applied to this job.
+                </div>
+            @endcan
+        @else
             <div class="text-center text-sm font-medium text-slate-500">
-                You already applied to this job. 
+                Please <a href="{{ route('login') }}" class="text-blue-500 hover:text-blue-600">login</a> to apply for this job.
             </div>
-
-        @endcan
+        @endif
 
     </x-job-card>
 

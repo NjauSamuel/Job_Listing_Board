@@ -20,7 +20,9 @@
                         <div>
                             <div>{{ $application->user->name }}</div>
                             <div> Applied {{ $application->created_at->diffForHumans() }} </div>
-                            <div>Download CV</div>
+                            <div>
+                                <a href="" class="text-blue-500">Download CV</a>    
+                            </div>
                         </div>
 
                         <div>
