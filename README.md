@@ -36,7 +36,7 @@ Follow these steps to run Larajobs locally:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/larajobs.git
+   git clone https://github.com/NjauSamuel/Job_Listing_Board.git
    cd larajobs
    ```
 
