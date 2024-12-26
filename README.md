@@ -14,9 +14,9 @@ Larajobs is a comprehensive job board application built with Laravel and Blade t
 
 ## Screenshot
 
-**[Home User Interface](job-board/public/images/Home_Dashboard.png)**
+**![Home User Interface](job-board/public/images/Home_Dashboard.png)**
 
-**[UI View](job-board/public/images/Jobs.png)**
+**![UI View](job-board/public/images/Jobs.png)**
 
 Visual overview of Larajobs.
 
